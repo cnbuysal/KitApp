@@ -1,0 +1,43 @@
+﻿@model Book
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="wrapper row">
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <img src="@Url.Content(Model.ImageThumbnailUrl)" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h3 class="product-title">@Model.Name</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span>41 reviews</span>
+                    </div>
+                    <p>@Model.Description</p>
+                    <h4>Price: <span>@Model.Price TL</span></h4>
+                    <p><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                    <div class="mb-0">
+                        <a class="btn btn-success" id="cartButton" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 my-5">
+                <div class="col-lg-9">
+                    <h4 style="border-bottom:solid">Details</h4>
+                    <p>Page Number : @Model.PageNumber</p>
+                    <p>Dimensions : @Model.Dimensions</p>
+                    <p>Publication Date : @Model.PublicationDate</p>
+                    <p>Publisher : @Model.Publisher</p>
+                    <p>Language : @Model.Language</p>
+                </div>
+            </div>
+    </div>

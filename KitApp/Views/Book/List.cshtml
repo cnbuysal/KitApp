@@ -1,0 +1,30 @@
+﻿
+
+<!-- Page Content -->
+    
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-lg-3">
+                <h2>Categories</h2>
+                <div class="list-group pt-3 pb-2 border-top border-dark">
+                    <a class="catlink pl-4" asp-controller="Book" asp-action="List" asp-route-category="">View all books</a>
+                    @foreach (Category category in Model.Categories)
+                    {
+                        <partial name="Categories" model="category" />
+                    }
+                </div>
+            </div>
+
+            <div class="col-lg-9 mt-5">
+                <div class="row">
+                    @foreach (Book book in Model.Books)
+                    {
+                        <partial name="BooksSummary" model="book" />
+                    }
+                </div>
+
+            </div>
+            
+        </div>
+    </div>      

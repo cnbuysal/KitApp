@@ -1,0 +1,35 @@
+﻿html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+
+.main-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.card-img-top {
+    width: 70%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.catlink {
+    color:black;
+    padding:5px;
+}
+
+.catlink:hover {
+    color: #808080;
+    padding: 5px;
+}

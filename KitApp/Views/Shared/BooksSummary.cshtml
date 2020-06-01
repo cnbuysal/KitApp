@@ -1,0 +1,22 @@
+﻿
+    @model Book
+
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="card h-100">
+        <a asp-controller="Book" asp-action="Details" asp-route-id="@Model.Id"><img class="card-img-top mx-auto d-block" src="@Url.Content(Model.ImageThumbnailUrl)" alt=""></a>
+        <div class="card-body">
+            <h5 class="card-title">
+                <a asp-controller="Book" asp-action="Details" asp-route-id="@Model.Id">@Model.Name</a>
+            </h5>
+            <h6>@Model.Price TL</h6>
+            <p class="card-text">@Model.Author</p>
+        </div>
+        <div class="addToCart text-center">
+            <p class="button ">
+                <a class="btn btn-success" id="cartButton" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">
+                    Add to cart
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
