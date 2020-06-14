@@ -18,7 +18,6 @@ namespace KitApp.Data.Repositories
         }
 
         public IEnumerable<Book> Books => _appDbContext.Books;
-
         public IEnumerable<Book> PreferredBooks => _appDbContext.Books.Where(p => p.IsPreferredBook);
         public Book GetBookById(int BookId) => _appDbContext.Books.FirstOrDefault(i => i.Id == BookId);
     }

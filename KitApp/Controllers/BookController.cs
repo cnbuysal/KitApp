@@ -54,7 +54,6 @@ namespace KitApp.Controllers
                 CurrentCategory = currentCategory,
                 Categories = categories
             };
-
             return View(bookListViewModel);
         }
         public IActionResult Index()

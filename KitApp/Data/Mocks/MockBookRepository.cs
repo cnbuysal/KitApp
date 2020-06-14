@@ -52,6 +52,60 @@ namespace KitApp.Data.Mocks
                         Price = 40.50m,
                         PublicationDate = "1991",
                         Publisher = "HarperCollins Publishers"
+                    },
+                    new Book
+                    {
+                        Id = 3,
+                        Name = "The Return of the King",
+                        Author = "J.R.R. Tolkien",
+                        CategoryId = 7,
+                        Description = "The awesome conclusion to The Lord of the Rings--the greatest fantasy epic of all time--which began in The Fellowship of the Ring and The Two Towers. Nominated as one of America's best-loved novels by PBS's The Great American Read While the evil might of the Dark Lord Sauron swarms out to conquer all Middle-earth, Frodo and Sam struggle deep into Mordor, seat of Sauron's power. To defeat the Dark Lord, the One Ring, ruler of all the accursed Rings of Power, must be destroyed in the fires of Mount Doom. But the way is impossibly hard, and Frodo is weakening. Weighed down by the compulsion of the Ring, he begins finally to despair.",
+                        Dimensions = "13x20",
+                        ImageThumbnailUrl = "~/images/BookThumbnails/lotr3.jpg",
+                        ImageUrl = "",
+                        InStock = 19,
+                        IsPreferredBook = false,
+                        Language = "English",
+                        PageNumber = "408",
+                        Price = 40.50m,
+                        PublicationDate = "1993",
+                        Publisher = "Del Rey Books"
+                    },
+                    new Book
+                    {
+                        Id = 4,
+                        Name = "Üvercinka",
+                        Author = "Cemal Süreya",
+                        CategoryId = 5,
+                        Description = "Cemal Süreya, ilk kitabı Üvercinka 1958'de çıktığında, 27 yaşında, ilk şiiri (\"Şarkısı Beyaz\") daha beş yıl önce yayımlanmış genç bir şairdi. Bu kitapla çağcıl Türk şiirinin en çok konuşulan, en çok tartışılan akımlarından İkinci Yeni'nin öncülerinden biri olacağını ne kendisi ne de bir başkası bilebilirdi.",
+                        Dimensions = null,
+                        ImageThumbnailUrl = "~/images/BookThumbnails/uvercinka.jpg",
+                        ImageUrl = "",
+                        InStock = 5,
+                        IsPreferredBook = false,
+                        Language = "Turkish",
+                        PageNumber = "64",
+                        Price = 6m,
+                        PublicationDate = "2014",
+                        Publisher = "Yapı Kredi Yayınları"
+                    },
+                    new Book
+                    {
+                        Id = 5,
+                        Name = "Aslında Herkes Haklı",
+                        Author = "Ali Lidar",
+                        CategoryId = 5,
+                        Description = "Linç Çağı’nda, Şirintepe Parkı’nda, heybende meleğin emanetleri, çölleri ve karlı ovaları aşacak, yangınlara tanık olacaksın, soyut atların gölgesinde soluklanıp, şirk sınırlarını zorlarken, deliydim geçti de geç.Bu yolculukta en çok kendine tanık olacaksın; ayrılık öfke ve keder yoldaşın olacak, müzevirler dünyanı karartacak. Ali Lidar şiirleriyle seni, sana anlatacak.Dünyanın yükü kendisinden ağırsa, tek çare terazinin kefesine bir tutam adalet koymaktır.Aslında Herkes Haklı, anılardan bir kırkyama…",
+                        Dimensions = "13.5x21",
+                        ImageThumbnailUrl = "~/images/BookThumbnails/aslindaherkeshakli.jpg",
+                        ImageUrl = "",
+                        InStock = 48,
+                        IsPreferredBook = true,
+                        Language = "Turkish",
+                        PageNumber = "128",
+                        Price = 10.22m,
+                        PublicationDate = "2018",
+                        Publisher = "İthaki Yayınları"
                     }
                 };
             }

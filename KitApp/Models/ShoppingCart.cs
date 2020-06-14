@@ -1,4 +1,5 @@
 ﻿using KitApp.Data;
+using KitApp.Data.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,7 +36,7 @@ namespace KitApp.Models
 
         public void AddToCart(Book book)
         {
-            var shoppingCartItem = _appDbContext.ShoppingCartItems.SingleOrDefault(s => s.Book.Id == book.Id && s.ShoppingCartId == ShoppingCartId);
+            var shoppingCartItem = _appDbContext.ShoppingCartItems.FirstOrDefault(s => s.Book.Id == book.Id && s.ShoppingCartId == ShoppingCartId);
 
             if (shoppingCartItem == null)
             {
@@ -93,7 +94,6 @@ namespace KitApp.Models
         {
             var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Select(c => c.Book.Price * c.Quantity).Sum();
             return total;
-                
         }
     }
 }
