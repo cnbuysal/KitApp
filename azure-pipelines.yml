@@ -27,6 +27,12 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: ''**\Tests'
+    contents: '**'
+    targetFolder: ''**\KitApp'
 
 - task: VSTest@2
   inputs:
