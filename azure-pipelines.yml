@@ -30,9 +30,9 @@ steps:
     
 - task: CopyFiles@2
   inputs:
-    sourceFolder: ''**\Tests'
+    sourceFolder: '**\Tests'
     contents: '**'
-    targetFolder: ''**\KitApp'
+    targetFolder: '**\KitApp'
 
 - task: VSTest@2
   inputs:
