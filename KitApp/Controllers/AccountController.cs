@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using KitApp.Data;
+using KitApp.Models;
 using KitApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Session;
 
 namespace KitApp.Controllers
 {
@@ -18,7 +21,7 @@ namespace KitApp.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly AppDbContext _appDbContext;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager,AppDbContext appDbContext )
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, AppDbContext appDbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -30,7 +33,7 @@ namespace KitApp.Controllers
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
@@ -67,7 +70,7 @@ namespace KitApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (_appDbContext.Users.FirstOrDefault(n => n.UserName == loginViewModel.UserName)!=null)
+                if (_appDbContext.Users.FirstOrDefault(n => n.UserName == loginViewModel.UserName) != null)
                 {
                     ModelState.AddModelError("UserName", "Username already exists");
                 }
@@ -87,6 +90,5 @@ namespace KitApp.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
     }
 }
