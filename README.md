@@ -1,6 +1,6 @@
 [![Build Status](https://dev.azure.com/cnbuysal/KitApp/_apis/build/status/KitApp-ASP.NET%20Core-CI?branchName=master)](https://dev.azure.com/cnbuysal/KitApp/_build/latest?definitionId=3&branchName=master)
 
-# [KitApp](https://github.com/ddbeck/readme-checklist)
+# [KitApp]
 
 ## What is KitApp
 KitApp is an open source online book store project.
